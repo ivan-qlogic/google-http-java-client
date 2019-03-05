@@ -112,6 +112,7 @@ public class HttpBackOffIOExceptionHandler implements HttpIOExceptionHandler {
     try {
       return BackOffUtils.next(sleeper, backOff);
     } catch (InterruptedException exception) {
+      exception.printStackTrace();
       return false;
     }
   }
